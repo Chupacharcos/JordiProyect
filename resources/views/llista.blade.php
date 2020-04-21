@@ -1,4 +1,12 @@
 @extends('plantilles/plantilla')
 @section('principal')
-    <h2>Llistat</h2>
+    <table>
+        @foreach($listado as $p)
+            <tr>
+                <td>{{ $p->TITULO }} </td>
+                <td><a href='/pelicula/{{ $p->ID }}'>Mostra</a></td>
+            </tr>
+        @endforeach
+    </table>
+
 @endsection
